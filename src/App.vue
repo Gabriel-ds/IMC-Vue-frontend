@@ -1,17 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1 class="center">Calcule o seu IMC</h1>
+  <AddImc />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AddImc from "./components/AddImc.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    AddImc,
+  },
+};
 </script>
 
 <style>
