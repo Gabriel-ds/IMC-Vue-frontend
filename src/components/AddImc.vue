@@ -17,36 +17,45 @@
         <input type="button" value="Calcular" v-on:click="imcCalc" />
       </div>
     </form>
+    <div>
+      {{data}}
+    </div>
   </div>
 </template>
 
 <script>
-import Swal from "sweetalert2";                           //Importa biblioteca de alertas do Vue 3
+import Swal from "sweetalert2";
+import api from "../services/api";
+
 export default {
   name: "AddImc",
+  data() {
+    return 
+  },
   methods: {
-    imcCalc: function () {
-      var weight = parseInt(this.weight);
-      var height = parseInt(this.height) / 100;
-      var imc = weight / (height * height);
-      var name = this.name
+    imcCalc: async function () {
+      const weight = parseInt(this.weight);
+      const height = parseInt(this.height) / 100;
+      const userName = this.name;
 
-      if(weight, height, name) {
-        if (imc >= 30) {
+      await api.post("/", {
+        userName,
+        height,
+        weight,
+      });
+
+      const { data } = await api.get("/");
+      console.log(data[data.length - 1].userName);
+
+        if ((weight, height, userName)) {
+        return await Swal.fire({
+          title: data[data.length - 1].title,
+          text: data[data.length - 1].text,
+          icon: data[data.length - 1].icon,
+          footer: data[data.length - 1].footer,
+        });
+      } else {
         return Swal.fire({
-          title: `Cuidado, ${name}!! 😮`,
-          text: `O seu IMC está no valor de ${imc.toFixed(0)}! Você está acima do peso!`,
-          icon: "warning",
-        });
-      } else {
-          return Swal.fire({
-          title: `Parabés, ${name} 👏`,
-          text: `O seu IMC está no valor de ${imc.toFixed(0)}! Você está no peso ideal!`,
-          icon: "success",
-        });
-      }
-      } else {
-         return Swal.fire({
           title: `Erro!`,
           text: `Preencha todos os campos para calcular!`,
           icon: "error",
@@ -78,7 +87,6 @@ body {
 }
 .center h1 {
   font-size: 2em;
-  border-left: 5px solid dodgerblue;
   padding: 10px;
   color: #000;
   letter-spacing: 5px;
@@ -115,8 +123,8 @@ body {
   transition: 0.6s;
   font-family: sans-serif;
 }
-.center .inputbox input:focus ~ span,
-.center .inputbox input:valid ~ span {
+.center .inputbox span,
+.center .inputbox span {
   transform: translateX(-13px) translateY(-35px);
   font-size: 1em;
 }
