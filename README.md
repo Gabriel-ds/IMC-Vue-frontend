@@ -1,5 +1,6 @@
-# Aplicativo deconsulta IMC feito em Vue.Js
-Frontend de uma aplicação Vue que mostra o IMC do usuário, sendo que toda a lógica e cálculo da plicação foram feitos em Node.Js em uma API externa. 
+# Aplicativo de consulta IMC feito em VUE.JS
+Frontend de uma aplicação Vue que mostra o IMC do usuário, sendo que toda a lógica e cálculo da aplicação foram feitos em Node.Js em uma API externa. 
+<a href="https://github.com/Gabriel-ds/IMC-Vue-api" target="_blank">Clique aqui</a> para ver minha API Node no GitHub.
 
 O deploy da aplicação foi feito do Heroku.
 
