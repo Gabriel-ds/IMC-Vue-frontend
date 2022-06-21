@@ -1,5 +1,8 @@
 # IMC-Vue-frontend
-Frontend de uma aplicação Vue que mostra o IMC do usuário
+Frontend de uma aplicação Vue que mostra o IMC do usuário.
+
+<a href="https://imc-app-vue-gabriel.herokuapp.com/" target="_blank">Clique</a> aqui para acessar o projeto clique no link abaixo
+
 # imc-vue-frontend
 
 ## Project setup
