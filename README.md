@@ -1,7 +1,9 @@
-# IMC-Vue-frontend
-Frontend de uma aplicação Vue que mostra o IMC do usuário.
+# Aplicativo deconsulta IMC feito em Vue.Js
+Frontend de uma aplicação Vue que mostra o IMC do usuário, sendo que toda a lógica e cálculo da plicação foram feitos em Node.Js em uma API externa. 
 
-<a href="https://imc-app-vue-gabriel.herokuapp.com/" target="_blank">Clique</a> aqui para acessar o projeto clique no link abaixo
+O deploy da aplicação foi feito do Heroku.
+
+<a href="https://imc-app-vue-gabriel.herokuapp.com/" target="_blank">Clique aqui</a> para testar o Projeto.
 
 # imc-vue-frontend
 
